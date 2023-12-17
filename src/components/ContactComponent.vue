@@ -8,7 +8,7 @@ const errorMessage = ref('')
 const successMessage = ref('')
 
 const submitForm = async () => {
-  const webhookURL = 'https://discord.com/api/webhooks/1182481776015331368/bqTIG__3a9Qeibkq0bXC13eaej0D6VZR1Eeqc_W1YNu69LkC2dCNVbhS9A6yUiHCFpet'
+  const webhookURL = process.env.VUE_APP_WEBHOOK_URL;
   const data = {
     content: `Nom: ${name.value}, Email: ${email.value}, Message: ${message.value}`
   }
